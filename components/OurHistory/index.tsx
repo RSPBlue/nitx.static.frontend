@@ -8,7 +8,7 @@ const OurHistory = () => {
       <Title color="black">
         NOSSA <strong className="text-brand">HISTÓRIA</strong>
       </Title>
-      <div className="grid grid-cols-4 w-full gap-2">
+      <div className="grid grid-cols-4 gap-4">
         <OurHistoryCard title="+DE 120">Colaboradores</OurHistoryCard>
         <OurHistoryCard title="+20">Anos de atuação no Mercado</OurHistoryCard>
         <OurHistoryCard title="+DE 100">

@@ -1,12 +1,15 @@
+"use client"
+
 interface Props {
   size?: number
   width?: number
   height?: number
   color?: string
+  className?: string
 }
 
 const NitxIcon = (props: Props) => {
-  const { size, width, height, color } = props
+  const { size, width, height, color, className } = props
 
   return (
     <svg
@@ -16,6 +19,7 @@ const NitxIcon = (props: Props) => {
       height={height ?? size ?? 135}
       viewBox="0 0 135 28"
       preserveAspectRatio="xMidYMid meet"
+      className={className}
     >
       <g transform="translate(0,28) scale(0.1,-0.1)" fill={color} stroke="none">
         <path

@@ -1,6 +1,6 @@
 import { IComponentWithChildren } from "@/types"
-import WreathLeft from "@/public/wreath-left.png"
-import WreathRight from "@/public/wreath-right.png"
+import WreathLeft from "@/public/wreath-left.svg"
+import WreathRight from "@/public/wreath-right.svg"
 import PillarImage from "@/public/pillar.svg"
 import Image from "next/image"
 
