@@ -9,8 +9,8 @@ import { mappedArcherRelations } from "./configs"
 const Ecosystem = () => {
   return (
     <PageSection>
-      <h2 className="font-oswald text-brand w-full text-center text-[64px] font-normal">
-        E C O S S I S T E M A
+      <h2 className="font-oswald text-brand w-full text-center text-[64px] font-normal tracking-widest">
+        ECOSSISTEMA
       </h2>
       <ArcherContainer className="w-full pb-30">
         <div className="flex w-full">
