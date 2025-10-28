@@ -18,7 +18,7 @@ export default function Home() {
       <Banner />
       <OurHistory />
       <IdealizationDiagram />
-      <div>
+      <div className="pt-24">
         <PartnersMarquee />
         <div className="pb-30">
           <Competences />

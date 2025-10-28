@@ -38,7 +38,7 @@ const Navbar = (props: { className?: string }) => {
   return (
     <nav
       className={classNames(
-        "fixed top-0 z-50 gap-20 w-full flex justify-between items-center transition-all duration-1000",
+        "fixed top-0 z-50 gap-20 w-full justify-between items-center transition-all duration-1000 hidden xl:flex",
         color,
         padding,
         className,
