@@ -8,7 +8,7 @@ import PageSection from "../PageSection"
 
 const IdealizationDiagram = () => {
   return (
-    <PageSection>
+    <PageSection id="idealization">
       <h2 className="font-oswald text-brand text-center text-[64px] font-normal">
         NOSSA <span className="font-bold">IDEALIZAÇÃO</span>
       </h2>

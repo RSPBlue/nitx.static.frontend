@@ -9,16 +9,18 @@ import MarketAndServicesDetailsOuter from "@/components/MarketAndServicesDetails
 import OurHistory from "@/components/OurHistory"
 import PartnersMarquee from "@/components/PartnersMarquee"
 import WordviewPillars from "@/components/WordviewPillars"
+import Navbar from "@/Layout/Navbar"
 
 export default function Home() {
   return (
-    <div className="font-unbounded flex flex-col gap-20 overflow-y-auto font-light">
+    <div className="relative font-unbounded flex flex-col overflow-y-auto font-light">
+      <Navbar />
       <Banner />
       <OurHistory />
       <IdealizationDiagram />
       <div>
         <PartnersMarquee />
-        <div className="bg-white-to-brand pb-30">
+        <div className="pb-30">
           <Competences />
         </div>
         <div className="flex flex-col">

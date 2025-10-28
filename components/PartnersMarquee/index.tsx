@@ -4,7 +4,8 @@ import Image from "next/image"
 
 const PartnersMarquee = () => {
   return (
-    <section className="w-full py-8 bg-white">
+    // Aqui o id de competencias é setado no marquee para o header não sobrepor o conteúdo.
+    <section id="competencies" className="w-full py-8 bg-white">
       <Marquee
         speed={150}
         gradient={false}

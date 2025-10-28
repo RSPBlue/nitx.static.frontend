@@ -3,7 +3,7 @@ import Pillar from "./Pillar"
 
 const WordviewPillars = () => {
   return (
-    <PageSection>
+    <PageSection id="pillars">
       <div className="flex flex-col gap-20 w-full">
         <div className="flex flex-col">
           <h2 className="font-oswald text-background text-center text-[64px] font-normal">

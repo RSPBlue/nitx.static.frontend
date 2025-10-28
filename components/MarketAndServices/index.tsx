@@ -1,11 +1,13 @@
-import Image from "next/image"
-import NovaNITXLogo from "@/public/novaitx-white.png"
-import NitxMarketServiceDiagram from "@/public/nitx-market-services.png"
 import NitxLogo from "@/public/nitx-logo.png"
+import NitxMarketServiceDiagram from "@/public/nitx-market-services.png"
+import Image from "next/image"
 
 const MarketAndServicesMain = () => {
   return (
-    <section className="relative flex items-center justify-around py-20">
+    <section
+      id="market"
+      className="relative flex items-center justify-around py-20"
+    >
       <div className="flex items-center flex-col gap-10 w-1/5">
         <h2 className="flex flex-col gap-4 font-oswald italic text-7xl text-background">
           <span>Mercados e</span>

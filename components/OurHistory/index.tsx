@@ -3,7 +3,7 @@ import OurHistoryCard from "./OurHistoryCard"
 
 const OurHistory = () => {
   return (
-    <PageSection>
+    <PageSection id="history">
       <section className="flex flex-col items-center overflow-x-auto">
         <div className="flex max-w-[1240px] flex-col items-center gap-8">
           <h2 className="font-oswald text-center text-[64px] font-normal">
