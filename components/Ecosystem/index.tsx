@@ -1,10 +1,10 @@
 "use client"
 
-import NitxLogoSecondary from "@/public/nitx-logo-brand-color.png"
 import Image from "next/image"
 import { ArcherContainer, ArcherElement } from "react-archer"
 import PageSection from "../PageSection"
 import { mappedArcherRelations } from "./configs"
+import NitxIcon from "@/icons/NitxIcon"
 
 const Ecosystem = () => {
   return (
@@ -56,7 +56,7 @@ const Ecosystem = () => {
                 id="center-content-1"
                 relations={mappedArcherRelations.get("center")}
               >
-                <p className="py-4 px-8 rounded-full w-full text-center text-background bg-brand">
+                <p className="py-4 px-8 rounded-full w-full flex justify-center text-center items-center text-background bg-brand">
                   Invest Tools
                 </p>
               </ArcherElement>
@@ -64,7 +64,7 @@ const Ecosystem = () => {
                 id="center-content-2"
                 relations={mappedArcherRelations.get("center")}
               >
-                <p className="py-4 px-8 rounded-full w-full text-center text-background bg-brand">
+                <p className="py-4 px-8 rounded-full w-full flex justify-center text-center items-center text-background bg-brand">
                   Nutech
                 </p>
               </ArcherElement>
@@ -72,18 +72,14 @@ const Ecosystem = () => {
                 id="center-content-3"
                 relations={mappedArcherRelations.get("center")}
               >
-                <p className="py-4 px-8 rounded-full w-full text-center text-background bg-brand">
+                <p className="py-4 px-8 rounded-full w-full flex justify-center text-center items-center text-background bg-brand">
                   Silicon Village
                 </p>
               </ArcherElement>
             </div>
             <ArcherElement id="bottom-content-1">
               <figure className="w-full flex justify-center pt-2">
-                <Image
-                  src={NitxLogoSecondary}
-                  alt="Logomarca NITX"
-                  className="w-40 object-contain"
-                />
+                <NitxIcon color="#002ccc" width={200} height={50} />
               </figure>
             </ArcherElement>
           </div>

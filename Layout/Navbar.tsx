@@ -1,5 +1,6 @@
 "use client"
 
+import NitxIcon from "@/icons/NitxIcon"
 import NitxLogo from "@/public/nitx-logo.png"
 import classNames from "classnames"
 import Image from "next/image"
@@ -45,7 +46,7 @@ const Navbar = (props: { className?: string }) => {
     >
       <figure>
         <Link href="#top">
-          <Image src={NitxLogo} alt="Logomarca NITX" />
+          <NitxIcon color="#f1f3f5" height={20} />
         </Link>
       </figure>
       <ul
