@@ -49,7 +49,7 @@ const Ecosystem = () => {
             >
               <p className="font-oswald text-center text-lg">CYBERSECURITY</p>
             </ArcherElement>
-            <div className="flex justify-between gap-10 text-xl w-full">
+            <div className="flex justify-between gap-10 text-lg w-full">
               <ArcherElement
                 id="center-content-1"
                 relations={mappedArcherRelations.get("center")}

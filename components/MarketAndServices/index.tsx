@@ -6,7 +6,7 @@ const MarketAndServicesMain = () => {
   return (
     <section
       id="market"
-      className="relative flex items-center justify-around py-20"
+      className="relative flex items-center justify-around py-28"
     >
       <div className="flex items-center flex-col gap-10 w-1/5">
         <h2 className="flex flex-col gap-4 font-oswald italic text-7xl text-background">

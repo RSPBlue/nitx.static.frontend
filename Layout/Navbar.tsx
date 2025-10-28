@@ -3,8 +3,18 @@
 import useApplicationMediaQuery from "@/hooks/useApplicationMediaQuery"
 import NitxIcon from "@/icons/NitxIcon"
 import classNames from "classnames"
+import {
+  BookOpen,
+  Crown,
+  Landmark,
+  Lightbulb,
+  MonitorCog,
+  Phone,
+  Store,
+} from "lucide-react"
 import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
+import HoverButton from "./HoverButton"
 
 const Navbar = (props: { className?: string }) => {
   const { className } = props
@@ -26,10 +36,10 @@ const Navbar = (props: { className?: string }) => {
   const listenScrollEvent = () => {
     if (window.scrollY > 10) {
       setColor("bg-brand")
-      setPadding("p-8 px-20")
+      setPadding("py-4 px-10 lg:py-8 lg:px-20")
     } else {
       setColor("bg-transparent")
-      setPadding("py-12 px-12")
+      setPadding("py-6 px-6 lg:py-12 lg:px-12")
     }
   }
 
@@ -41,7 +51,7 @@ const Navbar = (props: { className?: string }) => {
   return (
     <nav
       className={classNames(
-        "fixed top-0 z-50 gap-20 w-full justify-between items-center transition-all duration-1000 flex",
+        "fixed top-0 z-40 gap-20 w-full h-fit flex justify-between items-center transition-all duration-1000",
         color,
         padding,
         className,
@@ -53,6 +63,7 @@ const Navbar = (props: { className?: string }) => {
             color={
               largeDevice || color !== "bg-transparent" ? "#f1f3f5" : "#003183"
             }
+            width={96}
             height={20}
             className="transition-colors duration-300 delay-150"
           />
@@ -69,94 +80,157 @@ const Navbar = (props: { className?: string }) => {
       >
         <li
           className={classNames(
-            "hidden xl:block px-2 rounded-full transition-colors duration-300",
-            {
-              "bg-white hover:bg-brand hover:text-white":
-                color === "bg-transparent",
-              "bg-transparent hover:bg-white hover:text-brand":
-                color !== "bg-transparent",
-            },
+            "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#history">História</Link>
+          <Link href="#history">
+            <HoverButton
+              text="História"
+              icon={<BookOpen width={24} />}
+              className={classNames({
+                "bg-white hover:bg-white": color === "bg-transparent",
+                "bg-brand hover:bg-brand": color !== "bg-transparent",
+              })}
+              iconClassName={classNames({
+                "text-brand hover:text-white": color === "bg-transparent",
+                "text-white hover:text-brand": color !== "bg-transparent",
+              })}
+            />
+          </Link>
         </li>
         <li
           className={classNames(
-            "hidden xl:block px-2 rounded-full transition-colors duration-300",
-            {
-              "bg-white hover:bg-brand hover:text-white":
-                color === "bg-transparent",
-              "bg-transparent hover:bg-white hover:text-brand":
-                color !== "bg-transparent",
-            },
+            "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#idealization">Idealização</Link>
+          <Link href="#idealization">
+            <HoverButton
+              text="Idealização"
+              icon={<Lightbulb width={24} />}
+              className={classNames({
+                "bg-white hover:bg-white": color === "bg-transparent",
+                "bg-brand hover:bg-brand": color !== "bg-transparent",
+              })}
+              iconClassName={classNames({
+                "text-brand hover:text-white": color === "bg-transparent",
+                "text-white hover:text-brand": color !== "bg-transparent",
+              })}
+            />
+          </Link>
         </li>
         <li
           className={classNames(
-            "hidden xl:block px-2 rounded-full transition-colors duration-300",
-            {
-              "bg-white hover:bg-brand hover:text-white":
-                color === "bg-transparent",
-              "bg-transparent hover:bg-white hover:text-brand":
-                color !== "bg-transparent",
-            },
+            "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#competencies">Competências</Link>
+          <Link href="#competencies">
+            <HoverButton
+              text="Competências"
+              icon={<Crown width={24} />}
+              className={classNames({
+                "bg-white hover:bg-white": color === "bg-transparent",
+                "bg-brand hover:bg-brand": color !== "bg-transparent",
+              })}
+              iconClassName={classNames({
+                "text-brand hover:text-white": color === "bg-transparent",
+                "text-white hover:text-brand": color !== "bg-transparent",
+              })}
+            />
+          </Link>
         </li>
         <li
           className={classNames(
-            "hidden xl:block px-2 rounded-full transition-colors duration-300",
-            {
-              "bg-white hover:bg-brand hover:text-white":
-                color === "bg-transparent",
-              "bg-transparent hover:bg-white hover:text-brand":
-                color !== "bg-transparent",
-            },
+            "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#market">Mercados e Serviços</Link>
+          <Link href="#market">
+            <HoverButton
+              text="Mercados e Serviços"
+              icon={<Store width={24} />}
+              className={classNames({
+                "bg-white hover:bg-white": color === "bg-transparent",
+                "bg-brand hover:bg-brand": color !== "bg-transparent",
+              })}
+              iconClassName={classNames({
+                "text-brand hover:text-white": color === "bg-transparent",
+                "text-white hover:text-brand": color !== "bg-transparent",
+              })}
+            />
+          </Link>
         </li>
         <li
           className={classNames(
-            "hidden xl:block px-2 rounded-full transition-colors duration-300",
-            {
-              "bg-white hover:bg-brand hover:text-white":
-                color === "bg-transparent",
-              "bg-transparent hover:bg-white hover:text-brand":
-                color !== "bg-transparent",
-            },
+            "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#pillars">Pilares</Link>
+          <Link href="#pillars">
+            <HoverButton
+              text="Pilares"
+              icon={<Landmark width={24} />}
+              className={classNames({
+                "bg-white hover:bg-white": color === "bg-transparent",
+                "bg-brand hover:bg-brand": color !== "bg-transparent",
+              })}
+              iconClassName={classNames({
+                "text-brand hover:text-white": color === "bg-transparent",
+                "text-white hover:text-brand": color !== "bg-transparent",
+              })}
+            />
+          </Link>
         </li>
         <li
           className={classNames(
-            "hidden xl:block px-2 rounded-full transition-colors duration-300",
-            {
-              "bg-white hover:bg-brand hover:text-white":
-                color === "bg-transparent",
-              "bg-transparent hover:bg-white hover:text-brand":
-                color !== "bg-transparent",
-            },
+            "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#ecosystem">Ecossistema</Link>
+          <Link href="#ecosystem">
+            <HoverButton
+              text="Ecossistema"
+              icon={<MonitorCog width={24} />}
+              className={classNames({
+                "bg-white hover:bg-white": color === "bg-transparent",
+                "bg-brand hover:bg-brand": color !== "bg-transparent",
+              })}
+              iconClassName={classNames({
+                "text-brand hover:text-white": color === "bg-transparent",
+                "text-white hover:text-brand": color !== "bg-transparent",
+              })}
+            />
+          </Link>
         </li>
         <li
           className={classNames(
-            "hidden xl:block px-2 rounded-full transition-colors duration-300",
+            "hidden lg:block px-2 rounded-full transition-colors duration-300",
+          )}
+        >
+          <Link href={mailToHref}>
+            <HoverButton
+              text="Contato"
+              icon={<Phone width={24} />}
+              className={classNames({
+                "bg-white hover:bg-white": color === "bg-transparent",
+                "bg-brand hover:bg-brand": color !== "bg-transparent",
+              })}
+              iconClassName={classNames({
+                "text-brand hover:text-white": color === "bg-transparent",
+                "text-white hover:text-brand": color !== "bg-transparent",
+              })}
+            />
+          </Link>
+        </li>
+        <li
+          className={classNames(
+            "lg:hidden px-2 rounded-full transition-colors duration-300",
             {
-              "bg-white hover:bg-brand hover:text-white":
-                color === "bg-transparent",
-              "bg-transparent hover:bg-white hover:text-brand":
-                color !== "bg-transparent",
+              "text-brand-dark": color === "bg-transparent",
+              "text-background": color === "bg-brand",
             },
           )}
         >
-          <Link href={mailToHref}>Contato</Link>
+          <Link href={mailToHref} className="flex gap-2 items-center">
+            <Phone width={24} />
+            <span>Contato</span>
+          </Link>
         </li>
       </ul>
     </nav>
