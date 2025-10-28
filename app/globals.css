@@ -1,22 +1,142 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f1f3f5;
+  --foreground: #111315;
+  --brand: #0d5cdf;
+  --brand-dark: #003183;
+  --secondary: #002ccc;
+  --tertiary: #94fded;
+  --foreground-accent: #f1a831;
+  --yellow: #ffe30c;
+
+  --font-family-oswald: "Oswald", sans-serif;
+  --font-family-unbounded: "Unbounded", sans-serif;
+
+  --banner-bg: url("/nitx-banner-1.jpg");
+}
+
+.font-oswald {
+  font-family: var(--font-oswald);
+}
+
+.font-unbounded {
+  font-family: var(--font-unbounded);
 }
 
 @theme inline {
-  --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-foreground-accent: var(--foreground-accent);
+  --color-yellow: var(--yellow);
+
+  --animate-spin-slow: spin 60s linear infinite;
+
+  --font-oswald: var(--font-family-oswald);
+  --font-unbounded: var(--font-family-unbounded);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.banner {
+  background-image:
+    linear-gradient(0deg, var(--background) 0%, transparent 45%),
+    var(--banner-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background); /* fallback se imagem não carregar */
+}
+
+.bg-white-to-brand {
+  background: var(--brand-dark);
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--brand-dark) 0%,
+    var(--background) 2%
+  );
+  background: -moz-linear-gradient(
+    0deg,
+    var(--brand-dark) 0%,
+    var(--background) 2%
+  );
+  background: linear-gradient(0deg, var(--brand-dark) 0%, var(--background) 2%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#003183", endColorstr="#F1F3F5", GradientType=0);
+}
+
+.bg-tertiary-to-white {
+  background: #f1f3f5;
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--background) 0%,
+    var(--tertiary) 22%
+  );
+  background: -moz-linear-gradient(
+    0deg,
+    var(--background) 0%,
+    var(--tertiary) 22%
+  );
+  background: linear-gradient(0deg, var(--background) 0%, var(--tertiary) 22%);
+}
+
+.bg-secondary-fade {
+  background: var(--secondary);
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--secondary) 83%,
+    var(--background) 100%
+  );
+  background: -moz-linear-gradient(
+    0deg,
+    var(--secondary) 83%,
+    var(--background) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    var(--secondary) 83%,
+    var(--background) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#002CCC", endColorstr="#F1F3F5", GradientType=0);
+}
+
+.bg-brand-gradient {
+  background: var(--brand-dark);
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--brand-dark) 50%,
+    var(--brand) 100%
+  );
+  background: -moz-linear-gradient(
+    0deg,
+    var(--brand-dark) 50%,
+    var(--brand) 100%
+  );
+  background: linear-gradient(0deg, var(--brand-dark) 50%, var(--brand) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#003183", endColorstr="#0D5CDF", GradientType=0);
+}
+
+.bg-brand-gradient-reverse {
+  background: var(--brand);
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--brand) 50%,
+    var(--brand-dark) 100%
+  );
+  background: -moz-linear-gradient(
+    0deg,
+    var(--brand) 50%,
+    var(--brand-dark) 100%
+  );
+  background: linear-gradient(0deg, var(--brand) 50%, var(--brand-dark) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0D5CDF", endColorstr="#003183", GradientType=0);
+}
+
+.blue-card-shadow {
+  box-shadow: 3px 4px 21px -1px #0d5cdf80;
+  -webkit-box-shadow: 3px 4px 21px -1px #0d5cdf80;
+  -moz-box-shadow: 3px 4px 21px -1px #0d5cdf80;
 }
 
 body {

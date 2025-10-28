@@ -1,0 +1,11 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "editor.formatOnSave": true,
+  "prettier.documentSelectors": ["**/*.ts", "**/*.tsx"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "material-icon-theme.activeIconPack": "react",
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
+}

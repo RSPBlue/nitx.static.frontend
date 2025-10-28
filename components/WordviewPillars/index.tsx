@@ -1,0 +1,29 @@
+import PageSection from "../PageSection"
+import Pillar from "./Pillar"
+
+const WordviewPillars = () => {
+  return (
+    <PageSection>
+      <div className="flex flex-col gap-20 w-full">
+        <div className="flex flex-col">
+          <h2 className="font-oswald text-background text-center text-[64px] font-normal">
+            COMO <span className="font-bold">ENTENDEMOS</span>
+          </h2>
+          <h3 className="font-light text-foreground-accent text-center text-[23px]">
+            Visão de mundo em <strong>3 pilares</strong>
+          </h3>
+        </div>
+        <div className="flex justify-between w-full gap-2">
+          <Pillar>Entender, Apoiar, Inovar.</Pillar>
+          <Pillar>Excelência como filosofia</Pillar>
+          <Pillar>Agilidade & Precisão.</Pillar>
+        </div>
+        <p className="bg-foreground-accent text-secondary text-center font-normal pb-2">
+          COMO PARCEIROS, TRANSFORMANDO COM FOCO NO VALOR AGREGADO.
+        </p>
+      </div>
+    </PageSection>
+  )
+}
+
+export default WordviewPillars
