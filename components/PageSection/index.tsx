@@ -10,7 +10,7 @@ const PageSection = (props: IComponentWithChildren & { id?: string }) => {
         "pt-28": id,
       })}
     >
-      <div className="flex max-w-[1240px] w-full flex-col items-center gap-20">
+      <div className="flex max-w-[1240px] w-full flex-col items-center gap-20 px-4">
         {children}
       </div>
     </section>
