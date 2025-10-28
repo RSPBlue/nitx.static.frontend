@@ -6,13 +6,14 @@ import PageSection from "../PageSection"
 import CardDeliver from "./Card"
 import AsteriskIcon from "@/public/asterisk.svg"
 import { ArcherContainer, ArcherElement } from "react-archer"
+import Title from "@/Layout/Title"
 
 const Deliver = () => {
   return (
     <PageSection>
-      <h2 className="font-oswald text-background w-full text-center text-[64px] font-normal">
-        COMO <span className="font-bold">ENTREGAMOS</span>
-      </h2>
+      <Title color="white">
+        COMO <strong>ENTREGAMOS</strong>
+      </Title>
       <div className="flex justify-between w-full">
         <ArcherContainer>
           <div className="flex-1 flex flex-col gap-10 justify-center h-full">

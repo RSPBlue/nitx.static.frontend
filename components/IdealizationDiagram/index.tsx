@@ -5,13 +5,14 @@ import Image from "next/image"
 import { ArcherContainer, ArcherElement } from "react-archer"
 import { getRelations } from "./configs"
 import PageSection from "../PageSection"
+import Title from "@/Layout/Title"
 
 const IdealizationDiagram = () => {
   return (
     <PageSection id="idealization">
-      <h2 className="font-oswald text-brand text-center text-[64px] font-normal">
-        NOSSA <span className="font-bold">IDEALIZAÇÃO</span>
-      </h2>
+      <Title>
+        NOSSA <strong>IDEALIZAÇÃO</strong>
+      </Title>
       <p className="border-2 border-brand rounded-xl text-sm p-4">
         Silicon Village, Investtools e Newtech criam a joint venture que origina
         a novaITX, com o intuito de ampliar o escopo de atendimento e ter uma

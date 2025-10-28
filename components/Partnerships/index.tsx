@@ -2,14 +2,18 @@ import AwsPartnerLogo from "@/public/aws-partner.png"
 import LicelLogo from "@/public/licel-partner.png"
 import Image from "next/image"
 import PageSection from "../PageSection"
+import Title from "@/Layout/Title"
 
 const Partnerships = () => {
   return (
     <PageSection>
       <div className="flex flex-col w-full gap-32">
-        <h2 className="bg-secondary-fade w-full px-12 pt-8 pb-4 text-tertiary font-oswald text-[41px] rounded-b-4xl flex flex-col">
+        <Title className="">
           <span>NOSSAS</span>
           <strong>PARCERIAS</strong>
+
+        </Title>
+        <h2 className="bg-secondary-fade w-full px-12 pt-8 pb-4 text-tertiary font-oswald text-[41px] rounded-b-4xl flex flex-col">
         </h2>
       </div>
       <div className="flex gap-20 px-20 justify-around">

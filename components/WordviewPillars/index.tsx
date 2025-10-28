@@ -1,3 +1,4 @@
+import Title from "@/Layout/Title"
 import PageSection from "../PageSection"
 import Pillar from "./Pillar"
 
@@ -6,9 +7,9 @@ const WordviewPillars = () => {
     <PageSection id="pillars">
       <div className="flex flex-col gap-20 w-full">
         <div className="flex flex-col">
-          <h2 className="font-oswald text-background text-center text-[64px] font-normal">
-            COMO <span className="font-bold">ENTENDEMOS</span>
-          </h2>
+          <Title color="white">
+            COMO <strong>ENTENDEMOS</strong>
+          </Title>
           <h3 className="font-light text-foreground-accent text-center text-[23px]">
             Visão de mundo em <strong>3 pilares</strong>
           </h3>

@@ -1,12 +1,13 @@
+import Title from "@/Layout/Title"
 import PageSection from "../PageSection"
 import OurHistoryCard from "./OurHistoryCard"
 
 const OurHistory = () => {
   return (
     <PageSection id="history">
-      <h2 className="font-oswald text-center text-[64px] font-normal">
-        NOSSA <span className="text-brand font-bold">HISTÓRIA</span>
-      </h2>
+      <Title color="black">
+        NOSSA <strong className="text-brand">HISTÓRIA</strong>
+      </Title>
       <div className="grid grid-cols-4 w-full gap-2">
         <OurHistoryCard title="+DE 120">Colaboradores</OurHistoryCard>
         <OurHistoryCard title="+20">Anos de atuação no Mercado</OurHistoryCard>

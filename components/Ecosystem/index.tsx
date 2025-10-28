@@ -1,17 +1,15 @@
 "use client"
 
-import Image from "next/image"
+import NitxIcon from "@/icons/NitxIcon"
 import { ArcherContainer, ArcherElement } from "react-archer"
 import PageSection from "../PageSection"
 import { mappedArcherRelations } from "./configs"
-import NitxIcon from "@/icons/NitxIcon"
+import Title from "@/Layout/Title"
 
 const Ecosystem = () => {
   return (
     <PageSection id="ecosystem">
-      <h2 className="font-oswald text-brand w-full text-center text-[64px] font-normal tracking-widest">
-        ECOSSISTEMA
-      </h2>
+      <Title className="tracking-widest">ECOSSISTEMA</Title>
       <ArcherContainer className="w-full pb-30">
         <div className="flex w-full">
           <div className="w-1/5 flex flex-col justify-between text-end text-lg pr-24">
