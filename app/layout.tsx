@@ -40,7 +40,6 @@ export const metadata: Metadata = {
     description:
       "A união das “marcas originais” desta Joint Venture, cria uma organização poderosa, com mais de 20 anos de experiência, liderança e inovação no mercado de tecnologia, somando o poder de fogo de mais de 120 colaboradores, mais de 100 desenvolvedores especializados e mais de 25 especialistas em gestão de investimentos.",
     images: ["/nitx-banner-1.jpg"],
-    // creator: "@usuario", // opcional, se você tiver
   },
 }
 
