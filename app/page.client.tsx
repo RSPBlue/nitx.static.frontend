@@ -16,15 +16,15 @@ import Navbar from "@/Layout/Navbar"
 const PageClient = () => {
   return (
     <div className="relative font-unbounded flex flex-col overflow-y-auto font-light">
-      {/* <Navbar />
+      <Navbar />
       <Banner />
       <OurHistory />
-      <IdealizationDiagram /> */}
+      <IdealizationDiagram />
       <div className="pt-24">
-        {/* <PartnersMarquee />
+        <PartnersMarquee />
         <div className="pb-30">
           <Competencies />
-        </div> */}
+        </div>
         <div className="flex flex-col">
           <div className="bg-brand-dark">
             <MarketAndServicesMain />
@@ -32,12 +32,12 @@ const PageClient = () => {
           </div>
           <div className="bg-brand-gradient-reverse py-20 flex flex-col gap-40">
             <MarketAndServicesDetailsOuter />
-            {/* <WordviewPillars />
-            <Deliver /> */}
+            <WordviewPillars />
+            <Deliver />
           </div>
         </div>
       </div>
-      {/* <Ecosystem /> */}
+      <Ecosystem />
     </div>
   )
 }

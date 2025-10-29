@@ -16,7 +16,7 @@ const WordviewPillars = () => {
             Visão de mundo em <strong>3 pilares</strong>
           </h3>
         </div>
-        <div className="flex justify-between w-full gap-2">
+        <div className="flex justify-between w-full gap-10 flex-wrap">
           <Pillar>Entender, Apoiar, Inovar.</Pillar>
           <Pillar>Excelência como filosofia</Pillar>
           <Pillar>Agilidade & Precisão.</Pillar>
