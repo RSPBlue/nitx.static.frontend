@@ -1,3 +1,5 @@
+"use client"
+
 import { IComponentWithChildren } from "@/types"
 import classNames from "classnames"
 

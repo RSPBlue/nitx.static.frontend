@@ -1,3 +1,5 @@
+"use client"
+
 import NitxLogo from "@/public/nitx-logo.png"
 import NitxMarketServiceDiagram from "@/public/nitx-market-services.png"
 import Image from "next/image"

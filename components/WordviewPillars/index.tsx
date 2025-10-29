@@ -1,3 +1,5 @@
+"use client"
+
 import Title from "@/Layout/Title"
 import PageSection from "../PageSection"
 import Pillar from "./Pillar"

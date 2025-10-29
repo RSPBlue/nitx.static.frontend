@@ -21,7 +21,11 @@ const NitxIcon = (props: Props) => {
       preserveAspectRatio="xMidYMid meet"
       className={className}
     >
-      <g transform="translate(0,28) scale(0.1,-0.1)" fill={color} stroke="none">
+      <g
+        transform="translate(0,28) scale(0.1,-0.1)"
+        fill={color ?? "currentColor"}
+        stroke="none"
+      >
         <path
           d="M25 255 c-24 -23 -25 -31 -25 -135 l0 -110 35 0 34 0 3 96 3 96 107
 -101 c59 -55 116 -101 127 -101 10 0 29 9 42 19 22 18 24 27 27 135 l4 116

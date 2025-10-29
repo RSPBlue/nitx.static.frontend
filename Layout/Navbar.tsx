@@ -1,16 +1,15 @@
 "use client"
 
-import useApplicationMediaQuery from "@/hooks/useApplicationMediaQuery"
 import NitxIcon from "@/icons/NitxIcon"
 import classNames from "classnames"
 import {
   BookOpen,
+  ChartColumnBig,
   Crown,
   Landmark,
   Lightbulb,
   MonitorCog,
   Phone,
-  Store,
 } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
@@ -21,10 +20,6 @@ const Navbar = (props: { className?: string }) => {
 
   const [padding, setPadding] = useState("py-12 px-12")
   const [color, setColor] = useState("bg-transparent")
-  const largeDevice = useApplicationMediaQuery({
-    limitType: "min",
-    pixelLimit: 1280,
-  })
 
   const mailToHref = useMemo(() => {
     const subject = encodeURIComponent("Título do email")
@@ -60,12 +55,12 @@ const Navbar = (props: { className?: string }) => {
       <figure>
         <Link href="#top">
           <NitxIcon
-            color={
-              largeDevice || color !== "bg-transparent" ? "#f1f3f5" : "#003183"
-            }
             width={96}
             height={20}
-            className="transition-colors duration-300 delay-150"
+            className={classNames("transition-colors duration-300 delay-150", {
+              "text-brand-dark xl:text-white": color === "bg-transparent",
+              "text-white": color === "bg-brand",
+            })}
           />
         </Link>
       </figure>
@@ -146,7 +141,7 @@ const Navbar = (props: { className?: string }) => {
           <Link href="#market">
             <HoverButton
               text="Mercados e Serviços"
-              icon={<Store width={24} />}
+              icon={<ChartColumnBig width={24} />}
               className={classNames({
                 "bg-white hover:bg-white": color === "bg-transparent",
                 "bg-brand hover:bg-brand": color !== "bg-transparent",

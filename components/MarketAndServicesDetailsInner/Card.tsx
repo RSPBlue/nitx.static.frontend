@@ -1,3 +1,5 @@
+"use client"
+
 import { ICardProps } from "@/types"
 
 const MarketAndServicesInnerCard = (props: ICardProps) => {

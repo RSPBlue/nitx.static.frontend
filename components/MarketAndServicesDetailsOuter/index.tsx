@@ -1,3 +1,5 @@
+"use client"
+
 import PageSection from "../PageSection"
 import MarketAndServicesOuterCard from "./Card"
 

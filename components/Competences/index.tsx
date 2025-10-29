@@ -1,3 +1,5 @@
+"use client"
+
 import PageSection from "../PageSection"
 import CompetenciesCard from "./Card"
 

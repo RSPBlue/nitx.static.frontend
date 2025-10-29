@@ -1,3 +1,5 @@
+"use client"
+
 import Marquee from "react-fast-marquee"
 import { logoConfigs } from "./configs"
 import Image from "next/image"

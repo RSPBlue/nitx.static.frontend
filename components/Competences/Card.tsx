@@ -1,3 +1,5 @@
+"use client"
+
 import { ICardProps } from "@/types"
 import classNames from "classnames"
 

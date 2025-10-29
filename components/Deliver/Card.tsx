@@ -1,3 +1,5 @@
+"use client"
+
 import ArrowUpRightIcon from "@/public/arrow-up-right.svg"
 import Image from "next/image"
 import { ArcherElement } from "react-archer"

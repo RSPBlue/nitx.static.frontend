@@ -1,3 +1,5 @@
+"use client"
+
 import AwsPartnerLogo from "@/public/aws-partner.png"
 import LicelLogo from "@/public/licel-partner.png"
 import Image from "next/image"

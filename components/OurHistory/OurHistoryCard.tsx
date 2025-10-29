@@ -1,3 +1,5 @@
+"use client"
+
 import { ICardProps } from "@/types"
 
 const OurHistoryCard = (props: ICardProps) => {

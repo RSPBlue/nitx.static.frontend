@@ -1,3 +1,5 @@
+"use client"
+
 import { IComponentWithChildren } from "@/types"
 import WreathLeft from "@/public/wreath-left.svg"
 import WreathRight from "@/public/wreath-right.svg"
