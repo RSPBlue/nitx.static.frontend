@@ -1,5 +1,5 @@
 import Banner from "@/components/Banner"
-import Competences from "@/components/Competences"
+import Competencies from "@/components/Competences"
 import Deliver from "@/components/Deliver"
 import Ecosystem from "@/components/Ecosystem"
 import IdealizationDiagram from "@/components/IdealizationDiagram"
@@ -21,7 +21,7 @@ export default function Home() {
       <div className="pt-24">
         <PartnersMarquee />
         <div className="pb-30">
-          <Competences />
+          <Competencies />
         </div>
         <div className="flex flex-col">
           <div className="bg-brand-dark">

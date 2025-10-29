@@ -1,12 +1,12 @@
 import PageSection from "../PageSection"
 import CompetenciesCard from "./Card"
 
-const Competences = () => {
+const Competencies = () => {
   return (
     <PageSection>
-      <div className="flex gap-4 ">
-        <div className="flex-1 flex flex-col gap-8">
-          <div className="h-48 w-full p-4 bg-tertiary text-secondary rounded-b-4xl font-oswald flex justify-end items-end">
+      <div className="flex flex-col xl:flex-row gap-4">
+        <div className="xl:flex-1 flex flex-col gap-8">
+          <div className="w-full p-4 bg-tertiary text-secondary rounded-b-4xl font-oswald flex justify-end items-end">
             <h2 className="text-[41px] text-end">
               NOSSAS <strong>COMPETÊNCIAS</strong>
             </h2>
@@ -14,8 +14,9 @@ const Competences = () => {
           <CompetenciesCard
             title="ENGENHARIA DE SOFTWARE SOB MEDIDA"
             className="h-full"
+            titleClassName="text-center xl:text-start"
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex text-center flex-col gap-4">
               <p>
                 Desenvolvimento de soluções web e mobile sob medida, com alta
                 escalabilidade e confiabilidade.
@@ -44,10 +45,10 @@ const Competences = () => {
             </div>
           </CompetenciesCard>
         </div>
-        <div className="w-3/4 grid grid-cols-3 gap-4">
+        <div className="xl:w-3/4 grid grid-cols-12 gap-4">
           <CompetenciesCard
             title="INTEGRAÇÃO E CONECTIVIDADE DE ECOSSISTEMAS"
-            className="mt-4"
+            className="col-span-full sm:col-span-6 xl:col-span-4 mt-4"
           >
             <div className="flex flex-col gap-4">
               <p>Especialistas em APIs RESTful seguras e performáticas.</p>
@@ -63,7 +64,7 @@ const Competences = () => {
           </CompetenciesCard>
           <CompetenciesCard
             title="SUSTENTAÇÃO DE SISTEMAS EM PRODUÇÃO"
-            className="mt-4"
+            className="col-span-full sm:col-span-6 xl:col-span-4 mt-4"
           >
             <div className="flex flex-col gap-4">
               <p>
@@ -82,7 +83,7 @@ const Competences = () => {
           </CompetenciesCard>
           <CompetenciesCard
             title="ESPECIALIZAÇÃO EM NUVEM - AWS PARTNER"
-            className="mt-4"
+            className="col-span-full sm:col-span-6 xl:col-span-4 mt-4"
           >
             <div className="flex flex-col gap-4">
               <p>
@@ -99,7 +100,10 @@ const Competences = () => {
               </p>
             </div>
           </CompetenciesCard>
-          <CompetenciesCard title="GESTÃO DE PROJETOS E GOVERNANÇA DE ENTREGAS">
+          <CompetenciesCard
+            title="GESTÃO DE PROJETOS E GOVERNANÇA DE ENTREGAS"
+            className="col-span-full sm:col-span-6 xl:col-span-4"
+          >
             <div className="flex flex-col gap-4">
               .<p>Especialistas em APIs RESTful seguras e performáticas .</p>
               <p>
@@ -112,7 +116,10 @@ const Competences = () => {
               </p>
             </div>
           </CompetenciesCard>
-          <CompetenciesCard title="EXCELÊNCIA EM AMBIENTES REGULATÓRIOS SENSÍVEIS">
+          <CompetenciesCard
+            title="EXCELÊNCIA EM AMBIENTES REGULATÓRIOS SENSÍVEIS"
+            className="col-span-full sm:col-span-6 xl:col-span-4"
+          >
             <div className="flex flex-col gap-4">
               <p>
                 Entregas alinhadas a requisitos do BACEN, SUSEP, PCI-DSS, LGPD e
@@ -130,7 +137,10 @@ const Competences = () => {
               </p>
             </div>
           </CompetenciesCard>
-          <CompetenciesCard title="INTELIGÊNCIA ARTIFICIAL APLICADA AO NEGÓCIO">
+          <CompetenciesCard
+            title="INTELIGÊNCIA ARTIFICIAL APLICADA AO NEGÓCIO"
+            className="col-span-full sm:col-span-6 xl:col-span-4"
+          >
             <div className="flex flex-col gap-4">
               <p>
                 Aplicação prática de IA em processos de crédito, pagamentos,
@@ -150,7 +160,7 @@ const Competences = () => {
           </CompetenciesCard>
           <CompetenciesCard
             title="CULTURA DE PERFORMANCE, TRANSPARÊNCIA E ALINHAMENTO ESTRATÉGICO"
-            className="col-span-2"
+            className="col-span-full xl:col-span-9"
           >
             <div className="flex flex-col gap-4">
               <p>
@@ -175,4 +185,4 @@ const Competences = () => {
   )
 }
 
-export default Competences
+export default Competencies

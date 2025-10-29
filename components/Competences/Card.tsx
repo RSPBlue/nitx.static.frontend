@@ -1,8 +1,8 @@
 import { ICardProps } from "@/types"
 import classNames from "classnames"
 
-const CompetenciesCard = (props: ICardProps) => {
-  const { title, children, className } = props
+const CompetenciesCard = (props: ICardProps & { titleClassName?: string }) => {
+  const { title, titleClassName, children, className } = props
 
   return (
     <div
@@ -11,7 +11,12 @@ const CompetenciesCard = (props: ICardProps) => {
         className,
       )}
     >
-      <h3 className="bg-tertiary text-secondary font-oswald font-bold text-base p-4">
+      <h3
+        className={classNames(
+          "bg-tertiary text-secondary font-oswald font-bold text-base p-4",
+          titleClassName,
+        )}
+      >
         {title}
       </h3>
       <div className="p-4 text-xs">{children}</div>
