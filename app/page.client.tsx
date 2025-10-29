@@ -31,11 +31,11 @@ const PageClient = () => {
           <div className="bg-brand-gradient-reverse py-20 flex flex-col gap-40">
             {/* <MarketAndServicesDetailsOuter />
             <WordviewPillars /> */}
-            <Deliver />
+            {/* <Deliver /> */}
           </div>
         </div>
       </div>
-      {/* <Ecosystem /> */}
+      <Ecosystem />
     </div>
   )
 }

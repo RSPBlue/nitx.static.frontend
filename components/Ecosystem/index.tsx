@@ -1,16 +1,45 @@
 "use client"
 
 import NitxIcon from "@/icons/NitxIcon"
+import Title from "@/Layout/Title"
+import { ArrowBigDown, EllipsisVertical } from "lucide-react"
 import { ArcherContainer, ArcherElement } from "react-archer"
 import PageSection from "../PageSection"
 import { mappedArcherRelations } from "./configs"
-import Title from "@/Layout/Title"
+import EcosystemMobileCard from "./MobileCard"
 
 const Ecosystem = () => {
   return (
     <PageSection id="ecosystem">
       <Title className="tracking-widest">ECOSSISTEMA</Title>
-      <ArcherContainer className="w-full pb-30">
+      <div className="flex flex-col items-center gap-4 w-full lg:hidden">
+        <EcosystemMobileCard title="Nutech" list={["CYBERSECURITY"]} />
+        <EllipsisVertical size={64} className="text-secondary text-center" />
+        <EcosystemMobileCard
+          title="Invest Tools"
+          list={[
+            "FERRAMENTAS AVANÇADAS EM FINANÇAS",
+            "EXPERTS FINANCEIROS",
+            "DESENVOLVEDORES ESPECIALIZADOS",
+            "EXPERIÊNCIA E CERTIFICAÇÕES ELEVADAS",
+          ]}
+        />
+        <EllipsisVertical size={64} className="text-secondary text-center" />
+        <EcosystemMobileCard
+          title="Silicon Village"
+          list={[
+            "PARCERIAS E CERTIFICAÇÕES",
+            "CASES SÓLIDOS",
+            "+120 COLABORADORES",
+            "INFRAESTRUTURA",
+          ]}
+        />
+        <ArrowBigDown size={64} className="text-secondary text-center" />
+        <figure className="w-full flex justify-center pb-20">
+          <NitxIcon color="#002ccc" width={400} height={100} />
+        </figure>
+      </div>
+      <ArcherContainer className="w-full pb-30 hidden lg:block">
         <div className="flex w-full">
           <div className="w-1/5 flex flex-col justify-between text-end text-lg pr-24">
             <ArcherElement
