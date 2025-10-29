@@ -6,7 +6,7 @@ import MarketAndServicesInnerCard from "./Card"
 const MarketAndServicesDetailsInner = () => {
   return (
     <PageSection>
-      <div className="flex justify-between items-stretch gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:flex-row">
         <MarketAndServicesInnerCard title="BANKING">
           Atendemos bancos tradicionais e digitais com soluções para core
           bancário, onboarding, crédito, Pix, Open Finance e segurança

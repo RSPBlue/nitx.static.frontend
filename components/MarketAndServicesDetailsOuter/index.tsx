@@ -6,7 +6,7 @@ import MarketAndServicesOuterCard from "./Card"
 const MarketAndServicesDetailsOuter = () => {
   return (
     <PageSection>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <MarketAndServicesOuterCard title="CYBERSECURITY" alignEnd>
           Projetamos, migramos e operamos soluções em ambientes cloud-native com
           foco em escalabilidade, segurança e custo-eficiência. Atuamos com
