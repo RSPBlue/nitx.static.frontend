@@ -6,7 +6,7 @@ const strokeStyle: LineType = {
   strokeWidth: 1,
 }
 
-export const getRelations = (
+export const getIdealizationArcherRelations = (
   side: "left" | "right",
   row: number,
 ): RelationType[] => [
