@@ -1,6 +1,7 @@
 "use client"
 
 import NitxIcon from "@/icons/NitxIcon"
+import labels from "@/labels"
 import classNames from "classnames"
 import {
   BookOpen,
@@ -10,6 +11,7 @@ import {
   Lightbulb,
   MonitorCog,
   Phone,
+  Zap,
 } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
@@ -17,15 +19,16 @@ import HoverButton from "./HoverButton"
 
 const Navbar = (props: { className?: string }) => {
   const { className } = props
+  const { navbar, links } = labels
 
   const [padding, setPadding] = useState("py-12 px-12")
   const [color, setColor] = useState("bg-transparent")
 
   const mailToHref = useMemo(() => {
-    const subject = encodeURIComponent("Título do email")
-    const body = encodeURIComponent("Conteúdo do email")
+    const subject = encodeURIComponent(navbar.emailSubject)
+    const body = encodeURIComponent(navbar.emailBody)
 
-    return `mailto:nitx.exemplo@dominio.com?subject=${subject}&body=${body}`
+    return `mailto:${navbar.mailTo}?subject=${subject}&body=${body}`
   }, [])
 
   const listenScrollEvent = () => {
@@ -78,9 +81,9 @@ const Navbar = (props: { className?: string }) => {
             "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#history">
+          <Link href={`#${links.history}`}>
             <HoverButton
-              text="História"
+              text={navbar.history}
               icon={<BookOpen width={24} />}
               className={classNames({
                 "bg-white hover:bg-white": color === "bg-transparent",
@@ -98,9 +101,9 @@ const Navbar = (props: { className?: string }) => {
             "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#idealization">
+          <Link href={`#${links.idealization}`}>
             <HoverButton
-              text="Idealização"
+              text={navbar.idealization}
               icon={<Lightbulb width={24} />}
               className={classNames({
                 "bg-white hover:bg-white": color === "bg-transparent",
@@ -118,9 +121,9 @@ const Navbar = (props: { className?: string }) => {
             "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#competencies">
+          <Link href={`#${links.competencies}`}>
             <HoverButton
-              text="Competências"
+              text={navbar.competencies}
               icon={<Crown width={24} />}
               className={classNames({
                 "bg-white hover:bg-white": color === "bg-transparent",
@@ -138,9 +141,9 @@ const Navbar = (props: { className?: string }) => {
             "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#market">
+          <Link href={`#${links.marketAndServices}`}>
             <HoverButton
-              text="Mercados e Serviços"
+              text={navbar.marketAndServices}
               icon={<ChartColumnBig width={24} />}
               className={classNames({
                 "bg-white hover:bg-white": color === "bg-transparent",
@@ -158,9 +161,9 @@ const Navbar = (props: { className?: string }) => {
             "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#pillars">
+          <Link href={`#${links.pillars}`}>
             <HoverButton
-              text="Pilares"
+              text={navbar.pillars}
               icon={<Landmark width={24} />}
               className={classNames({
                 "bg-white hover:bg-white": color === "bg-transparent",
@@ -178,10 +181,10 @@ const Navbar = (props: { className?: string }) => {
             "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
-          <Link href="#ecosystem">
+          <Link href={`#${links.deliver}`}>
             <HoverButton
-              text="Ecossistema"
-              icon={<MonitorCog width={24} />}
+              text={navbar.deliver}
+              icon={<Zap width={24} />}
               className={classNames({
                 "bg-white hover:bg-white": color === "bg-transparent",
                 "bg-brand hover:bg-brand": color !== "bg-transparent",
@@ -198,9 +201,30 @@ const Navbar = (props: { className?: string }) => {
             "hidden lg:block px-2 rounded-full transition-colors duration-300",
           )}
         >
+          <Link href={`#${links.ecosystem}`}>
+            <HoverButton
+              text={navbar.ecosystem}
+              icon={<MonitorCog width={24} />}
+              className={classNames({
+                "bg-white hover:bg-white": color === "bg-transparent",
+                "bg-brand hover:bg-brand": color !== "bg-transparent",
+              })}
+              iconClassName={classNames({
+                "text-brand hover:text-white": color === "bg-transparent",
+                "text-white hover:text-brand": color !== "bg-transparent",
+              })}
+            />
+          </Link>
+        </li>
+
+        <li
+          className={classNames(
+            "hidden lg:block px-2 rounded-full transition-colors duration-300",
+          )}
+        >
           <Link href={mailToHref}>
             <HoverButton
-              text="Contato"
+              text={navbar.contact}
               icon={<Phone width={24} />}
               className={classNames({
                 "bg-white hover:bg-white": color === "bg-transparent",
@@ -224,7 +248,7 @@ const Navbar = (props: { className?: string }) => {
         >
           <Link href={mailToHref} className="flex gap-2 items-center">
             <Phone width={24} />
-            <span>Contato</span>
+            <span>{navbar.contact}</span>
           </Link>
         </li>
       </ul>

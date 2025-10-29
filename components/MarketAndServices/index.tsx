@@ -2,12 +2,15 @@ import NitxLogo from "@/public/nitx-logo.png"
 import NitxMarketServiceDiagram from "@/public/nitx-market-services.png"
 import Image from "next/image"
 import PageSection from "../PageSection"
+import labels from "@/labels"
 
 const MarketAndServicesMain = () => {
+  const { links } = labels
+
   return (
     <PageSection>
       <div
-        id="market"
+        id={links.marketAndServices}
         className="flex flex-col items-center justify-around py-20 xl:flex-row gap-28"
       >
         <div className="flex items-center gap-10 flex-col xl:w-2/5 max-w-md">

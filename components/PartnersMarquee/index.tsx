@@ -3,11 +3,14 @@
 import Marquee from "react-fast-marquee"
 import { logoConfigs } from "./configs"
 import Image from "next/image"
+import labels from "@/labels"
 
 const PartnersMarquee = () => {
+  const { links } = labels
+
   return (
     // Aqui o id de competencias é setado no marquee para o header não sobrepor o conteúdo.
-    <section id="competencies" className="w-full py-8 bg-white">
+    <section id={links.competencies} className="w-full py-8 bg-white">
       <Marquee
         speed={150}
         gradient={false}

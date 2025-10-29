@@ -30,7 +30,7 @@ const PageClient = () => {
             <MarketAndServicesMain />
             <MarketAndServicesDetailsInner />
           </div>
-          <div className="bg-brand-gradient-reverse py-20 flex flex-col gap-40">
+          <div className="bg-brand-gradient-reverse py-20 flex flex-col gap-20">
             <MarketAndServicesDetailsOuter />
             <WordviewPillars />
             <Deliver />

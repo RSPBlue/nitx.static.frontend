@@ -6,7 +6,7 @@ import { ForwardRefExoticComponent, ReactNode, RefAttributes } from "react"
 
 const IdealizationMobileCard = (
   props: ICardProps & {
-    Icon?: ForwardRefExoticComponent<
+    Icon: ForwardRefExoticComponent<
       Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
     >
   },

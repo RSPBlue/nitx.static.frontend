@@ -1,6 +1,10 @@
 "use client"
 
+import labels from "@/labels"
+
 const Banner = () => {
+  const { banner } = labels
+  
   return (
     <div
       id="top"
@@ -8,10 +12,10 @@ const Banner = () => {
     >
       <h1 className="font-oswald items-center xl:items-end px-10 gap-10 xl:gap-0 text-brand-dark xl:text-brand flex h-full w-full xl:w-1/2 flex-col justify-center font-bold">
         <span className="animate-fade-in text-center xl:text-start text-4xl lg:text-6xl">
-          ESTAMOS EM UMA
+          {banner.preffixTitle}
         </span>
         <span className="animate-fade-in delay-200 text-center xl:text-start text-6xl lg:text-8xl underline">
-          NOVA ERA.
+          {banner.suffixTitle}
         </span>
       </h1>
     </div>

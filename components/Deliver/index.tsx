@@ -7,10 +7,12 @@ import CardDeliver from "./Card"
 import AsteriskIcon from "@/public/asterisk.svg"
 import { ArcherContainer, ArcherElement } from "react-archer"
 import Title from "@/Layout/Title"
+import labels from "@/labels"
 
 const Deliver = () => {
+  const { links, deliver } = labels
   return (
-    <PageSection>
+    <PageSection id={links.deliver}>
       <Title color="white">
         COMO <strong>ENTREGAMOS</strong>
       </Title>
@@ -18,13 +20,16 @@ const Deliver = () => {
         <ArcherContainer className="w-fit">
           <div className="flex justify-center lg:justify-between">
             <div className="lg:flex-1 w-full sm:w-2/3 flex flex-col gap-10 justify-center h-full">
-              <CardDeliver archerId="stroke-connector-start">
-                Entender bem as necessidades
-              </CardDeliver>
-              <CardDeliver>Definir o modelo</CardDeliver>
-              <CardDeliver>Tratativas (propostas e afins)</CardDeliver>
-              <CardDeliver>Início dos serviços e implementação</CardDeliver>
-              <CardDeliver>Apresentar, aprender e otimizar</CardDeliver>
+              {deliver.cards.map(({ content, archerConnection }, index) => (
+                <CardDeliver
+                  key={index}
+                  {...(archerConnection && {
+                    archerId: "stroke-connector-start",
+                  })}
+                >
+                  {content}
+                </CardDeliver>
+              ))}
 
               <div className="flex gap-4 text-xl font-medium mt-10 w-2/3">
                 <ArcherElement
@@ -51,8 +56,7 @@ const Deliver = () => {
                   </div>
                 </ArcherElement>
                 <p className="px-1 w-1/3 text-background flex-1">
-                  Pós: estar lado a lado para suportar, ampliar/melhorias
-                  contínuas e escalar.
+                  {deliver.subtitle}
                 </p>
               </div>
             </div>
