@@ -21,7 +21,7 @@ export default {
     ecosystem: "ecosystem",
   },
   navbar: {
-    mailTo: "nitx.exemplo@dominio.com",
+    mailTo: "contato@novaitx.com.br",
     emailSubject: "Título do email",
     emailBody: "Conteúdo do email",
     history: "História",

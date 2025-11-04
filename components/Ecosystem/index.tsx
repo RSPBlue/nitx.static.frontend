@@ -17,7 +17,6 @@ const Ecosystem = () => {
   const { leftCard, topCard, rightCard } =
     ecosystem.cards.reduce<IEcosystemCardPositions>(
       (positions, card) => {
-        debugger
         const positionKey = `${card.side}Card` as keyof IEcosystemCardPositions
         positions[positionKey] = card
         return positions
